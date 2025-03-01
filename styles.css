@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+.header-container {
+    max-width: 1700px;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: 'Integral CF', sans-serif;
+    font-weight: 900;
+    font-size: 2.5em;
+    color: #000000;
+    letter-spacing: 2px;
+}
+
+nav {
+    margin-right: 200px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+    color: #333;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    color: #007bff;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.search-bar input {
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: #f0f0f0;
+    font-size: 0.9em;
+    width: 25vw;
+}
+
+.search-bar input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    margin-right: 200px;
+}
+
+.cart-icon, .account-icon {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.cart-icon:hover, .account-icon:hover {
+    color: #007bff;
+}
+
+/* Definirea fontului */
+@font-face {
+    font-family: 'Integral CF';
+    src: url('fonts/Fontspring-DEMO-integralcf-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Integral CF';
+    src: url('fonts/Fontspring-DEMO-integralcf-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Integral CF';
+    src: url('fonts/Fontspring-DEMO-integralcf-heavy.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Stilizare banner */
+.banner {
+    background-image: url('Imagini/IMG1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    position: relative;
+    overflow: hidden;
+    height: 663px; /* Înălțimea fixă specificată de tine */
+}
+
+.banner-content {
+    max-width: 1700px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+
+.banner-text h1 {
+    font-family: 'Integral CF', sans-serif;
+    font-weight: 900;
+    font-size: 4em;
+    color: black;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    width: 30vw;
+}
+
+.banner-text p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1em;
+    color: black;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    width: 32vw;
+}
+
+.shop-now {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 12vw;
+    font-family: 'Arial', sans-serif;
+}
+
+.shop-now:hover {
+    background-color: #333;
+}
+
+.banner-stats {
+    max-width: 1000px;
+    margin: 50px 0;
+    margin-left: 100px;
+    display: flex;
+    gap: 32px; /* Spațiu între elemente */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.stat {
+    text-align: left; /* Schimbă alinierea la stânga */
+    font-family: 'Arial', sans-serif;
+    color: gray;
+    position: relative; /* Necesar pentru poziționarea liniei */
+    font-size: 1.5em;
+}
+
+.stat span {
+    font-weight: 600;
+    font-size: 2em;
+    color: #000000;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.stat:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -20px; /* Jumătate din gap pentru centrare */
+    top: 0;
+    height: 100%; /* Linia să acopere toată înălțimea */
+    width: 2px; /* Grosimea liniei */
+    background-color: rgb(180, 180, 180); /* Culoarea liniei */
+}
+
+
+.brands {
+    height: 122px;
+    background-color: black;
+    display: flex; /* Activează flexbox pentru centrare */
+    justify-content: space-between; /* Distribuie imaginile cu spațiu între ele */
+    align-items: center; /* Centrează imaginile pe verticală */
+    padding-left: 100px; /* Spațiu la stânga */
+    padding-right: 100px; /* Adaugă spațiu la dreapta pentru simetrie */
+}
+
+.products-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.product-category {
+    margin-bottom: 80px;
+}
+
+.category-title {
+    font-family: 'Integral CF', sans-serif;
+    font-weight: 900;
+    font-size: 3em;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 30px;
+}
+
+.product-card {
+    text-align: left;
+}
+
+.product-card img {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    color: #000000;
+    margin: 15px 0 10px;
+}
+
+.rating {
+    color: #ffd700; /* Galben pentru stele */
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.price {
+    margin-top: 10px;
+}
+
+.current-price {
+    font-size: 1.3em;
+    color: #000000;
+    font-weight: bold;
+}
+
+.original-price {
+    font-size: 1.3em;
+    color: #666;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+.discount {
+    background-color: #ff8c00; /* Portocaliu pentru reducere */
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+.view-all {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 30px;
+    background-color: white;
+    border-radius: 25px;
+    border-width: 1px;
+    border-color: gray;
+    border-style: ridge;
+    font-size: 1em;
+    color: #000000;
+    cursor: pointer;
+    width: 120px;
+    text-align: center;
+    width: 200px;
+}
+
+.view-all:hover {
+    background-color: #e0e0e0;
+}
+
+.products-section hr {
+    border: 1px solid #f0f0f0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 carduri pe rând pe tablete */
+    }
+
+    .category-title {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 card pe rând pe mobil */
+    }
+
+    .category-title {
+        font-size: 2em;
+    }
+
+    .product-card img {
+        height: 250px;
+    }
+
+    .view-all {
+        width: 100px;
+    }
+}
